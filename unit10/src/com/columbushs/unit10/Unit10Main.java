@@ -13,6 +13,10 @@ public class Unit10Main {
 		//System.out.println(recur.recursion4(4));
 		
 		//recur.recursion5("apple");
+		
+		Unit10_2RecursiveSearchAndSort sort = new Unit10_2RecursiveSearchAndSort();
+		//sort.linearSearch();
+		sort.binarySearch();
 	}
 
 }
