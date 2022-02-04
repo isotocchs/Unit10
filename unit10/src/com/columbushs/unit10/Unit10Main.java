@@ -24,7 +24,7 @@ public class Unit10Main {
 		Unit10_2RecursiveSearchAndSort sort = new Unit10_2RecursiveSearchAndSort();
 		//sort.linearSearch();
 		//sort.binarySearch();
-		//sort.binarySearchRecursive(arraySearch, lowPosition, highPosition, target);
+		sort.binarySearchRecursive(arraySearch, lowPosition, highPosition, target);
 		//why extra????
 		
 //		int[] array3 = sort.mergeSort(arraySearch2, highPosition);

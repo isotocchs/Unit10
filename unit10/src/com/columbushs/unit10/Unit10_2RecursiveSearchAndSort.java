@@ -35,11 +35,12 @@ public class Unit10_2RecursiveSearchAndSort {
 		int highPosition = arraySearch.length;
 		int timesRun = 1;
 		
+		
 		while(lowPosition<=highPosition) {
 			
 			System.out.println("Times run: "+timesRun);
 			timesRun++;
-			
+			//int [] arraySearch = {0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38};
 			midPosition = (highPosition+lowPosition)/2;
 			if (arraySearch[midPosition]<target) {
 				lowPosition = midPosition+1;
