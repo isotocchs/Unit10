@@ -53,4 +53,12 @@ public class Unit10_2RecursiveSearchAndSort {
 		
 	}
 	
+	//Binary Search - recursive
+	
+	public void binarySearchRecursive(int [] arraySearch, int lowPosition, 
+			int highPosition, int target) {
+		
+		
+	}
+	
 }
