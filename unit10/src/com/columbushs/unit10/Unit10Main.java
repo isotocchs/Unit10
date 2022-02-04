@@ -14,9 +14,23 @@ public class Unit10Main {
 		
 		//recur.recursion5("apple");
 		
+		int target = 24;
+		int [] arraySearch = {0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38};
+		int [] arraySearch2 = {0,2,4,6,8,12,34,56,24,32,10,64,26,18,78,30,20,38,48,44};
+		int lowPosition = 0;
+		int midPosition;
+		int highPosition = arraySearch.length;
+		
 		Unit10_2RecursiveSearchAndSort sort = new Unit10_2RecursiveSearchAndSort();
 		//sort.linearSearch();
-		sort.binarySearch();
+		//sort.binarySearch();
+		//sort.binarySearchRecursive(arraySearch, lowPosition, highPosition, target);
+		//why extra????
+		
+//		int[] array3 = sort.mergeSort(arraySearch2, highPosition);
+//		for(int num:array3) {
+//			System.out.print(num+" ");
+//		}
 	}
 
 }

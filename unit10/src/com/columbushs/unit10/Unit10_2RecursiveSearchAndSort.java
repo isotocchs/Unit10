@@ -25,7 +25,8 @@ public class Unit10_2RecursiveSearchAndSort {
 		
 	}
 	
-	//Binary Search - divide things into chunks
+	//Binary Search - divide things into chunks 
+	//- good when things are in order
 	
 	public void binarySearch() {
 		
@@ -45,7 +46,7 @@ public class Unit10_2RecursiveSearchAndSort {
 			} else if (arraySearch[midPosition]>target) {
 				highPosition = midPosition-1;
 			} else {
-				System.out.println(midPosition);
+				System.out.println("This is where the target is: "+midPosition);
 				break;
 			}
 			
@@ -58,7 +59,64 @@ public class Unit10_2RecursiveSearchAndSort {
 	public void binarySearchRecursive(int [] arraySearch, int lowPosition, 
 			int highPosition, int target) {
 		
+		int midPosition;
+		System.out.println("Times run");
+		midPosition = (highPosition+lowPosition)/2;
+			if (arraySearch[midPosition]<target) {
+				binarySearchRecursive(arraySearch, midPosition+1, highPosition, target);
+			} 
+			if (arraySearch[midPosition]>target) {
+				binarySearchRecursive(arraySearch, lowPosition, midPosition-1, target);	
+			}
+			System.out.println("Found it in position: "+midPosition);
+		}
+	
+	
+	public int[] mergeSort(int[] a, int n) {
+		
+	
+	//left	
+	//right
+	//merge
+		if (n < 2) {
+	        return a;
+	    }
+	    int mid = n / 2;
+	    int[] l = new int[mid];
+	    int[] r = new int[n - mid];
+
+	    for (int i = 0; i < mid; i++) {
+	        l[i] = a[i];
+	    }
+	    for (int i = mid; i < n; i++) {
+	        r[i - mid] = a[i];
+	    }
+	    mergeSort(l, mid);
+	    mergeSort(r, n - mid);
+
+	    return merge(a, l, r, mid, n - mid);
 		
 	}
+	
+	public static int[] merge(
+			  int[] a, int[] l, int[] r, int left, int right) {
+			 
+			    int i = 0, j = 0, k = 0;
+			    while (i < left && j < right) {
+			        if (l[i] <= r[j]) {
+			            a[k++] = l[i++];
+			        }
+			        else {
+			            a[k++] = r[j++];
+			        }
+			    }
+			    while (i < left) {
+			        a[k++] = l[i++];
+			    }
+			    while (j < right) {
+			        a[k++] = r[j++];
+			    }
+			    return a;
+			}
 	
 }
