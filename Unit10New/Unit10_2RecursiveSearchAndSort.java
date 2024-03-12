@@ -69,14 +69,14 @@ public class Unit10_2RecursiveSearchAndSort {
 			}
 			System.out.println("Found it in position: "+midPosition);
 		}
+
+		//int [] arraySearch = {0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38};
+
 	
 	
 	public int[] mergeSort(int[] a, int n) {
-		
-	
-	//left	
-	//right
-	//merge
+	// int [] arraySearch2 = {0,2,4,6,8,12,34,56,24,32,10,64,26,18,78,30,20,38,48,44};
+
 		if (n < 2) {
 	        return a;
 	    }

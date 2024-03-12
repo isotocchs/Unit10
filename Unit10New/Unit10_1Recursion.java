@@ -10,6 +10,8 @@ public class Unit10_1Recursion {
 		}
 		System.out.println(n);
 	}
+
+
 	
 	public void recursion2(int n) {
 		System.out.println(n);
@@ -18,6 +20,8 @@ public class Unit10_1Recursion {
 		}
 		System.out.println(n);
 	}
+
+
 	
 	public int recursion3(int n) {
 		if (n==0) {
@@ -25,6 +29,9 @@ public class Unit10_1Recursion {
 		}
 		return n + recursion3(n/2);
 	}
+
+
+
 	
 	public int recursion4(int n) {
 		if (n>0) {
@@ -32,11 +39,13 @@ public class Unit10_1Recursion {
 		}
 		return 0;
 	}
+
+
 	
 	public void recursion5(String s) {
 		if (s.length()>1) {
 			recursion5(s.substring(2));
-			System.out.print(s.substring(0,1));
+			System.out.println(s.substring(0,1));
 		}
 	}
     
